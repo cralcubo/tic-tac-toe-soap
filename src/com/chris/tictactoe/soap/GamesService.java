@@ -99,6 +99,4 @@ public class GamesService {
 		manager.registerPlayer(game.getCirclePlayer());
 		manager.registerPlayer(game.getCrossPlayer());
 	}
-	
-
 }
