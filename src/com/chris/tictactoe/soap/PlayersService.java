@@ -29,8 +29,8 @@ import com.chris.tictactoe.soap.model.PlayerResource;
 import com.chris.tictactoe.soap.model.transformers.PlayerTransformer;
 
 @WebService(name="PlayerService", portName="PlayerPort", serviceName="PlayerService")
-public class PlayerService {
-	private static final Logger LOG = LoggerFactory.getLogger(PlayerService.class);
+public class PlayersService {
+	private static final Logger LOG = LoggerFactory.getLogger(PlayersService.class);
 	
 	private DAO<GamePlayer> playersRepository = PlayerStaticRepository.getInstance();
 	private DAO<GameManagerImpl> managerRepository = GameManagerStaticRepository.getInstance();
@@ -70,7 +70,7 @@ public class PlayerService {
 				manager.playCross(coordinate);
 			}
 		} catch(NoPlayersRegisteredException e){
-			LOG.error("Players need to be registered before the game is started, this is suppose to be done when a new game is created, check that method!", e);
+			LOG.error("Players need to be registered before the game is started, this is supposed to be done when a new game is created, check that method!", e);
 		}
 	}
 
