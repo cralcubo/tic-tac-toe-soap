@@ -8,6 +8,10 @@ public class GameTransformer{
 	public static GameResource toGameResource(Game complexObject) {
 		GameResource resource = new GameResource();
 		
+		if(complexObject == null){
+			return resource;
+		}
+		
 		resource.setId(complexObject.getId());
 		resource.setMatrix(complexObject.getGameMatrix());
 		

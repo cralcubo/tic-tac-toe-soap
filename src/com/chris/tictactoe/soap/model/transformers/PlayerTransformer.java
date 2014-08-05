@@ -8,6 +8,10 @@ public class PlayerTransformer{
 	public static PlayerResource toPlayerResource(GamePlayer complexObject) {
 		PlayerResource resource = new PlayerResource();
 		
+		if(complexObject == null){
+			return resource;
+		}
+		
 		resource.setId(complexObject.getId());
 		resource.setShape(complexObject.getShape());
 		
